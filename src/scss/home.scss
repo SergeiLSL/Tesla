@@ -40,7 +40,8 @@
 
 //========================================================================================================================================================
 .design {
-
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 100, 30);
 	// .design__container
 	&__container {
 	}
@@ -48,15 +49,24 @@
 	&__row {
 		display:flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: rem(20);
+		@include adaptiveValue("column-gap", 56, 20);
 	}
 	// .design__column
 	&__column {
-		gap: rem(56);
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
 		max-width: rem(572);
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size: 24px;
+		@include adaptiveValue("font-size", 24, 14);
 		line-height: math.div(28, 24);
-		background-color: rgb(0, 52, 19);
+		@media (max-width:$tablet){
+			margin: 0 auto; 
+		}
+
 	}
 	// .design__number
 	&__number {
@@ -65,7 +75,11 @@
 	// .design__text
 	&__text {
 		max-width: rem(450);
-		background-color: rgb(53, 151, 89);
+		margin-left: rem(106);
+		//@include adaptiveValue("margin-left", 106, 60, 1600, 960, 1);
+		@media (max-width:$mobile){
+			@include adaptiveValue("margin-left", 106, 30);
+		}
 	}
 }
 
