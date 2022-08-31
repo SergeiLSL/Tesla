@@ -40,10 +40,20 @@
 
 //========================================================================================================================================================
 .design {
-	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-top", 50, 25);
 	@include adaptiveValue("padding-bottom", 100, 30);
 	// .design__container
 	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+	//design__image
+	&__image {
+		@include adaptiveValue("margin-bottom", 100, 10);
+		position: relative;
+		img {
+			max-width: 100%;
+		}
 	}
 	// .design__row
 	&__row {

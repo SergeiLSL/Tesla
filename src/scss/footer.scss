@@ -1,8 +1,7 @@
 //====================================================================================================
 .footer {
 	background: $mainColorFooter;
-	//margin: 0 auto;
-	padding-top: rem(83);
+	@include adaptiveValue("padding-top", 83, 30);
 	width: 100%;
 	// .footer__container
 	&__container {
@@ -13,7 +12,8 @@
 	}
 	// .footer__btn
 	&__btn {
-		margin-bottom: rem(131);
+		//margin-bottom: rem(131);
+		@include adaptiveValue("margin-bottom", 131, 30);
 	}
 	// .footer__menu
 	&__menu {
@@ -34,6 +34,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		row-gap: rem(20);
 	}
 	// .menu__link
 	&__link {
