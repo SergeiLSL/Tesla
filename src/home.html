@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+@@include('html/_head.htm',{
+"title":"TESLA"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<!-- Оболочка слайдера -->
+			<div class="имя-блока__slider swiper">
+				<!-- Двигающееся часть слайдера -->
+				<div class="имя-блока__wrapper swiper-wrapper">
+					<!-- Слайд -->
+					<div class="имя-блока__slide swiper-slide"></div>
+				</div>
+				<!-- Если нужна пагинация -->
+				<div class="swiper-pagination"></div>
+				<!-- Если нужна навигация (влево/вправо) -->
+				<button type="button" class="swiper-button-prev"></button>
+				<button type="button" class="swiper-button-next"></button>
+				<!-- Если нужен скролбар -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+
+			<section class="characteristics">
+				<div class="characteristics__container">
+					<div class="characteristics__items">
+						<div class="characteristics__item">
+							<div class="characteristics__name">Двигатель</div>
+							<div class="characteristics__number">2,1<span> сек</span></div>
+							<div class="characteristics__index">разгон до 100 км</div>
+						</div>
+
+						<!-- <div class="characteristics__item">
+							<div class="characteristics__name">Батарея</div>
+							<div class="characteristics__numbers">
+								<div class="characteristics__numbers-row">
+									<div class="characteristics__numbers-column characteristics__numbers-column_1">
+										<div class="characteristics__number">1000</div>
+									</div>
+									<div class="characteristics__numbers-column characteristics__numbers-column_2">
+										<div class="characteristics__unit">км</div>
+									</div>									
+								</div>
+							</div>
+							<div class="characteristics__index">запас хода</div>
+						</div> -->
+
+						<div class="characteristics__item">
+							<div class="characteristics__name">Батарея</div>
+							<div class="characteristics__number">1000<span> км</span></div>
+							<div class="characteristics__index">запас хода</div>
+						</div>
+						<div class="characteristics__item">
+							<div class="characteristics__name">Скорость</div>
+							<div class="characteristics__number">400<span>км/час</span></div>
+							<div class="characteristics__index">макс скорость</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="design">
+				<div class="design__container">
+					<div class="design__row">
+						<div class="design__column">
+							<div class="design__number">01</div>
+							<div class="design__text">
+								<p>Новый родстер был разработан бывшим дизайнером Mazda Францем фон Хольцхаузеном.</p>
+								<p>Имеет съёмную стеклянную крышу и кузов с двумя передними сиденьями плюс два
+									небольших сиденья сзади.</p>
+							</div>
+						</div>
+						<div class="design__column">
+							<div class="design__number">02</div>
+							<div class="design__text">
+								<p>Родстер имеет три электродвигателя, один спереди и два сзади.</p>
+								<p>Они обеспечивают полный привод, а также систему адресного распределения крутящего
+									момента для лучшего прохождения поворотов.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+	<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+</body>
+
+</html>
