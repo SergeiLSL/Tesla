@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<!--! time 01:48:00 -->
 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 @@include('html/_head.htm',{
 "title":"TESLA"
@@ -10,13 +11,21 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
+			<!--! time 01:48:00 ролик 1-->
+			<section class="slaider">				
+
+			</section>
 			<!-- Оболочка слайдера -->
-			<div class="имя-блока__slider swiper">
+			<div class="tesla__slider swiper">
 				<!-- Двигающееся часть слайдера -->
-				<div class="имя-блока__wrapper swiper-wrapper">
+				<div class="tesla__wrapper swiper-wrapper">
 					<!-- Слайд -->
-					<div class="имя-блока__slide swiper-slide"></div>
-				</div>
+					<div class="tesla__slide swiper-slide">
+						<div class="tesla__image">
+							<!-- <img class="tesla__img-ibg" src="@img/header/slide-01.jpg" alt="car"> -->
+						</div>
+					</div>
+				</div>				
 				<!-- Если нужна пагинация -->
 				<div class="swiper-pagination"></div>
 				<!-- Если нужна навигация (влево/вправо) -->
@@ -32,25 +41,35 @@
 						<div class="characteristics__column">
 							<div class="characteristics__item">
 								<div class="characteristics__name">Двигатель</div>
-								<div class="characteristics__number">2,1<span> сек</span></div>
+								<div class="characteristics__number">2,1<span>сек</span></div>
 								<div class="characteristics__index">разгон до 100 км</div>
 							</div>
 						</div>
 						<div class="characteristics__column">
 							<div class="characteristics__item">
 								<div class="characteristics__name">Батарея</div>
-								<div class="characteristics__number">1000<span> км</span></div>
+								<div class="characteristics__number">1000<span>км</span></div>
 								<div class="characteristics__index">запас хода</div>
 							</div>
 						</div>
 						<div class="characteristics__column">
 							<div class="characteristics__item">
 								<div class="characteristics__name">Скорость</div>
-								<div class="characteristics__number">400<span> км/час</span></div>
+								<div class="characteristics__number characteristics__number_speed">400<span>км/час</span></div>
 								<div class="characteristics__index">макс скорость</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<!--! time 01:01:00 ролик 2-->
+			<!--! time 01:11:00 ролик 3-->
+			<section class="clip">
+				<div class="clip__container">
+					<div class="clip__video">
+						<!-- <iframe width="100%" height="400" src="https://www.youtube.com/embed/tw4jkyfY4HE" title="Roadster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+						<iframe src="https://www.youtube.com/embed/5fAyJMahL_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>					
 				</div>
 			</section>
 

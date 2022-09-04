@@ -173,7 +173,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // Функционал липкого блока
 // flsScroll.stickyBlock();
 
-// Модуль поекранної прокрутки
+// Модуль поекранной прокрутки
 // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
 // Сниппет(HTML):
 // import './libs/fullpage.js'
