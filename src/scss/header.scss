@@ -1,6 +1,6 @@
 //====================================================================================================
 
-.header {	
+.header {
 	// height: 100vh;
 	// .header__container
 	&__container {
@@ -43,9 +43,11 @@
 	}
 }
 
+
 .content {
 	font-size: rem(24);
 	line-height: math.div(28, 24);
+	padding-bottom: rem(400);
 	// .content__title
 	&__title {
 		font-size: rem(96);
@@ -62,6 +64,96 @@
 
 	// .content__btn
 	&__btn {
+	}
+
+	// .header__menu
+	&__menu {
+	}
+}
+
+// дополнительный класс, т.к на сам контейнер нельзя вешать position: relative;
+.container-menu {
+	position: relative;
+}
+
+
+.menu {
+	background-color: $mainColor;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	//display: none;
+	width: 100%;
+	.active {
+		left: 0;
+	}	
+	// .menu__container
+	&__container {
+		//position: relative;
+	}
+	// .menu__close-btn
+	&__close-btn {
+		width: rem(50);
+		height: rem(50);
+		//background-color: #fffff;
+		position: absolute;
+		right: 5%;
+		top: rem(31);
+		cursor: pointer;		
+		&::before,
+		&::after {
+			content: "";
+			width: rem(70);
+			height: rem(3);
+			background-color: #fff;
+			position: absolute;
+			transform-origin: left; // центрирование центра по квадрату close-btn
+		}
+		&::before {
+			transform: rotate(-45deg);
+			bottom: rem(-2); // центрирование центра по квадрату close-btn
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	// .menu__body
+	&__body {
+		left: -100%;		
+	}
+	// .menu__list
+	&__list {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	// .menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(44);
+		}				
+	}
+	// .menu__link
+	&__link {
+		display: inline-block;		
+		@include adaptiveValue("width", 368, 270);
+		font-family: "Roboto Condensed", sans-serif;
+		font-weight: 700;
+		//font-size: rem(48);
+		@include adaptiveValue("font-size", 48, 36);
+		line-height: math.div(56, 48);
+		border-bottom: rem(3) solid $mainColorRed;
+		padding-bottom: rem(14);
+		padding-right: rem(35);
+		transition: all 0.5s ease;
+		&:hover {
+			border-bottom: rem(3) solid #ffffff;
+			color: $mainColorRed;
+			transform: scale(110%);
+			margin-left: rem(15);
+			//transform:rotate(360deg);
+		}
 	}
 }
 
